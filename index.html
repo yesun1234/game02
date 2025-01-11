@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+    <title>QR콘텐츠</title>
+
+    <style>
+      html,
+      body {
+        padding: 0;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+      your-component {
+        display: block;
+        position: relative;
+        width: 80%;
+        height: 80%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <your-component></your-component>
+
+    <template id="class--content">
+      <div id="classStyudyContent">
+        <!-- Content -->
+        <div id="wrap" class="page">
+          <div id="container">
+            <!-- 변경되는 컨텐츠 시작 -->
+            <div class="page_title">
+              <span class="dot"></span>
+              <span>
+                <span class="title_border">보기</span>
+                의 뜻풀이에 해당하는 단어가 적힌 카드를 찾고, 카드에 적힌 글자를 차례대로 적어보자.
+              </span>
+              <button class="reset_btn" onclick="reset()">다시 풀기</button>
+            </div>
+
+            <div class="quiz_area">
+              <div class="quiz_txt">
+                <div class="quiz_title">보기</div>
+                <div class="quiz q1">
+                  <div class="question">
+                    <span class="tit">1</span>
+                    힘을 합하여 서로 도움.
+                  </div>
+                  <div class="answer">
+                    <img src="./img/off.png" alt="">
+                  </div>
+                </div>
+                <div class="quiz q2">
+                  <div class="question">
+                    <span class="tit">2</span>
+                    어떤 일에 대처할 방안
+                  </div>
+                  <div class="answer">
+                    <img src="./img/off.png" alt="">
+                  </div>
+                </div>
+                <div class="quiz q3">
+                  <div class="question">
+                    <span class="tit">3</span>
+                    높이어 귀중하게 대함.
+                  </div>
+                  <div class="answer">
+                    <img src="./img/off.png" alt="">
+                  </div>
+                </div>
+                <div class="quiz q4">
+                  <div class="question">
+                    <span class="tit">4</span>
+                    어느 쪽으로도 치우치지 않고 고름.
+                  </div>
+                  <div class="answer">
+                    <img src="./img/off.png" alt="">
+                  </div>
+                </div>
+                <div class="quiz q5">
+                  <div class="question">
+                    <span class="tit">5</span>
+                    분쟁을 중간에서 화해하게 하거나 <br />서로 타협점을 찾아 합의하도록 함.
+                  </div>
+                  <div class="answer">
+                    <img src="./img/off.png" alt="">
+                  </div>
+                </div>     
+              </div>        
+            
+              <div class="pwd_wrapper">
+                <div class="btn incorrect active b1">
+                  <span class="this_word">미</span>
+                  <span>유도</span>
+                </div>
+                <div class="btn correct active b2" data-match="3">
+                  <span class="this_word">보</span>
+                  <span>전중</span>
+                </div>
+                <div class="btn correct active b3" data-match="1">
+                  <span class="this_word">웃</span>
+                  <span>협력</span>
+                </div>
+                <div class="btn correct active b4" data-match="2">
+                  <span class="this_word">어</span>
+                  <span>유도</span>
+                </div>
+                <div class="btn correct active b5" data-match="4">
+                  <span class="this_word">세</span>
+                  <span>공평</span>
+                </div>
+                <div class="btn incorrect active b6">
+                  <span class="this_word">고</span>
+                  <span>경청</span>
+                </div>
+                <div class="btn correct active b7" data-match="5">
+                  <span class="this_word">요</span>
+                  <span>조정</span>
+                </div>
+                <div class="pwds">
+                  <div class="pwd p1" data-num="1"></div>
+                  <div class="pwd p2" data-num="2"></div>
+                  <div class="pwd p3" data-num="3"></div>    
+                  <div class="pwd p4" data-num="4"></div>    
+                  <div class="pwd p5" data-num="5"></div>                  
+                </div>
+              </div>
+            </div>
+            
+          </div>
+            <!-- 변경되는 컨텐츠 끝 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 복수개의 스타일 가능 -->
+      <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+      <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+      <!-- 복수개의 스크립트 파일 가능 -->
+      <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+      <script type="text/javascript" src="./common/js/base.js"></script>
+      <script type="text/javascript" src="./common/js/view.js"></script>
+      <script type="text/javascript" src="./common/js/lib.js"></script>
+      <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+      <script type="text/javascript" src="./common/js/common.js"></script>
+      <script type="text/javascript" src="./js/sound.js"></script>
+      <script type="text/javascript" src="./js/scripts.js"></script>
+    </template>
+
+    <script type="module" src="./common/js/shadow-dom-your.js"></script>
+    <!-- Page js -->
+  </body>
+</html>
